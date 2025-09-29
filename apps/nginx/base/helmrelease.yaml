@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: nginx
-      version: "15.14.0" # перевірити актуальну версію!
+      version: "21.1.23" # перевірити актуальну версію!
       sourceRef:
         kind: HelmRepository
         name: bitnami
