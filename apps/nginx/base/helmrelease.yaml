@@ -16,7 +16,7 @@ spec:
         namespace: flux-system
   values:
     image:
-      name: nginx
+      repository: nginx
   #   service:
   #     type: NodePort
   #     nodePorts:
