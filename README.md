@@ -14,3 +14,15 @@ flux create source git fluxcd-helm
 --interval=10m
 
 kubectl get gitrepo -n flux-system
+
+kubectl apply -f apps/nginx/base/helmrepository.yaml
+kubectl apply -f clusters/minikube/kustomization.yaml
+
+kubectl edit deploy -n flux-system helm-controller
+
+containers:
+- name: manager
+  env:
+  - name: HELM_EXPERIMENTAL_OCI
+    value: "1"
+
