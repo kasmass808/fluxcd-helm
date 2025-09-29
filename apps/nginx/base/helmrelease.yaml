@@ -14,7 +14,9 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
-  # values:
+  values:
+    image:
+      name: nginx
   #   service:
   #     type: NodePort
   #     nodePorts:
