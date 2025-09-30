@@ -1,4 +1,4 @@
 resources:
-  - helmrepository.yaml
+#  - helmrepository.yaml
   - helmrelease.yaml
-  
+  - gitrepository.yaml

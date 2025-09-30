@@ -1,0 +1,14 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: helm-repo
+  namespace: flux-system # Or your desired namespace
+spec:
+  interval: 10m
+  url: https://github.com/kasmass808/helm-charts.git
+  ref:
+    branch: main
+  # Optional: if your chart is in a subdirectory
+  # ignore: |
+  #   /*
+  #   !/charts/my-chart/

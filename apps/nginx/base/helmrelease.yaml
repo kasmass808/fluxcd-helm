@@ -8,12 +8,13 @@ spec:
   releaseName: nginx
   chart:
     spec:
-      chart: nginx
+      chart: ./nginx
       version: "21.1.23" # перевірити актуальну версію!
       sourceRef:
-        kind: HelmRepository
-        name: bitnami
+        kind: GitRepository
+        name: helm-repo
         namespace: flux-system
+      version: "0.1.0"
   values:
     image:
       repository: nginx
