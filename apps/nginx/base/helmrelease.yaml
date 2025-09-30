@@ -9,12 +9,11 @@ spec:
   chart:
     spec:
       chart: ./nginx
-      version: "21.1.23" # перевірити актуальну версію!
+      version: "0.1.0"
       sourceRef:
         kind: GitRepository
         name: helm-repo
         namespace: flux-system
-      version: "0.1.0"
   values:
     image:
       repository: nginx
