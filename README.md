@@ -15,9 +15,12 @@ flux create source git fluxcd-helm
 
 kubectl get gitrepo -n flux-system
 
-kubectl apply -f apps/nginx/base/helmrepository.yaml
+kubectl apply -f apps/nginx/base/gitrepository.yaml
+kubectl apply -f infra/prometheus/base/helmrepository.yaml
 kubectl apply -f clusters/minikube/kustomization.yaml
 
+
+# fix for oci repo
 kubectl edit deploy -n flux-system helm-controller
 
 containers:
