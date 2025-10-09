@@ -14,10 +14,10 @@ spec:
         kind: HelmRepository
         name: prometheus-community
         namespace: flux-system
-  values:
-    kubeStateMetrics:
-      resources:
-        - podresources
+  # values:
+  #   kubeStateMetrics:
+  #     resources:
+  #       - podresources
   # values:
   #   image:
   #     repository: nginx
